@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Reference repos
+superpowers/
+
+# Editor
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+*.bak
