@@ -88,6 +88,45 @@ For each assumption:
 
 Prioritize assumptions that are both **critical** and **untestable** - these are your biggest risks.
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Fact/Assumption split | Quick pass on key claims | Full categorization | Detailed with evidence citations |
+| Confidence levels | High/Low only | High/Medium/Low | Calibrated with reasoning |
+| Assumption inventory | Critical assumptions only | Important + critical | Comprehensive inventory |
+| Blind spots | Quick check | Identify gaps | Deep blind spot analysis |
+
+**Light:** Quick categorization of key claims. Focus on critical assumptions only. Simple confidence (high/low).
+
+**Medium:** Full fact/assumption separation. Standard confidence scale. Important and critical assumptions inventoried.
+
+**Complete:** Detailed categorization with evidence citations. Full confidence calibration with reasoning. Comprehensive assumption inventory. Deep blind spot analysis.
+
+## Upgrade Detection
+
+**Suggest upgrading if:**
+
+- Many claims fall into "assumption" category
+- Confidence on critical assumptions is Low
+- Significant blind spots identified
+- User realizes they're less certain than they thought
+
+**Upgrade prompt:**
+```
+⚠️ Calibration is revealing significant uncertainty:
+- [X of Y key claims are assumptions, not facts]
+- [Critical assumption X has low confidence]
+- [Blind spot identified: Y]
+
+This level of uncertainty suggests deeper analysis would be valuable.
+
+Current: [Weight]
+Suggested: [Higher Weight] - would provide [more rigorous assumption testing]
+
+Continue at current depth, or upgrade?
+```
+
 ## Output
 
 Create calibration log:
@@ -146,10 +185,10 @@ Save to: `docs/decisions/YYYY-MM-DD-<decision-slug>/calibration-log.md`
 
 ## Exit Criteria
 
-- All claims categorized as fact or assumption
+- All claims categorized as fact or assumption (depth per weight)
 - Confidence levels updated based on research
 - Knowns/Unknowns matrix refreshed
-- Assumption inventory complete with criticality ratings
+- Assumption inventory complete (depth per weight)
 - Critical risks explicitly identified
 
 ## Bias Watch

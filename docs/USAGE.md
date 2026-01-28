@@ -8,15 +8,45 @@ A practical guide to making high-stakes decisions with AI assistance.
 # Load the plugin
 claude --plugin-dir /path/to/deliberate-decisions
 
-# Start a decision
+# Start a decision (AI suggests depth after understanding the decision)
 > /decide
+
+# Or specify depth upfront
+> /decide --light      # <10 minutes
+> /decide --medium     # 30-40 minutes
+> /decide --complete   # 60-90 minutes
 ```
+
+## Decision Weight
+
+Not all decisions need the same rigor. The framework supports three depth levels:
+
+| Weight | Time | Best For |
+|--------|------|----------|
+| **Light** | <10 min | Reversible decisions, domain expertise, lower stakes |
+| **Medium** | 30-40 min | Moderate stakes, some uncertainty |
+| **Complete** | 60-90 min | High stakes, irreversible, significant uncertainty |
+
+**Key insight:** Weight affects *depth*, not *gates*. All 7 gates always run—just at different levels of thoroughness.
+
+### How Weight is Determined
+
+1. **User pre-specifies:** `/decide --light` or `/decide --medium` or `/decide --complete`
+2. **AI suggests:** After Thesis Gate, AI analyzes what it learned and recommends a weight
+
+### Upgrading Mid-Process
+
+You can upgrade anytime by saying "let's go deeper." The AI will also suggest upgrading if it detects:
+- Emerging complexity beyond current weight
+- Low confidence on critical assumptions
+- Surprising research findings
+- Stakes higher than initially framed
+
+Weight can only increase, never decrease. Already-completed gates stay as-is.
 
 ## What to Expect
 
-### Time Investment
-
-A thorough decision takes **60-120 minutes** of active work. This is intentional—the framework forces slow, deliberate thinking on decisions that deserve it.
+### Time by Gate (Complete Weight)
 
 | Gate | Typical Time | What Happens |
 |------|--------------|--------------|
@@ -27,6 +57,10 @@ A thorough decision takes **60-120 minutes** of active work. This is intentional
 | Contrarian | 10-15 min | Pre-mortem, steel-man, bias audit |
 | Synthesis | 10-15 min | Must-Be-True conditions, exit criteria |
 | Decision | 5-10 min | Human decides with full picture |
+
+**Light Weight:** Same gates, compressed (~1-2 min each). Focus on critical items only. Skip web research. Top 3 risks. No formal steel-manning.
+
+**Medium Weight:** Balanced depth (~3-6 min each). 1-2 web searches. 5 risk scenarios. Steel-man top alternative.
 
 ### Cost Estimate
 

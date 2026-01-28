@@ -100,6 +100,49 @@ Present the decision-maker with clear options:
 
 Each option leads to documentation in the Decision Gate.
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Must-Be-True | Top 3 conditions | 5-6 conditions | Comprehensive list |
+| Exit criteria | 1-2 basic tripwires | 3-4 specific tripwires | Detailed with thresholds + dates |
+| Risk assessment | High-level summary | Consolidated risks | Full risk matrix |
+| Recommendation | Brief with rationale | Standard format | Comprehensive with confidence reasoning |
+
+**Light:** Focus on top 3 Must-Be-True conditions. 1-2 basic exit criteria. High-level risk summary. Brief recommendation.
+
+**Medium:** 5-6 Must-Be-True conditions. 3-4 specific exit criteria with thresholds. Consolidated risk assessment. Standard recommendation format.
+
+**Complete:** Comprehensive Must-Be-True list. Detailed exit criteria with specific thresholds and review dates. Full risk matrix. Comprehensive recommendation with confidence reasoning.
+
+## Upgrade Detection
+
+At Synthesis, upgrade detection focuses on whether the analysis is sufficient:
+
+**Suggest upgrading if:**
+
+- Cannot formulate clear Must-Be-True conditions (analysis may be incomplete)
+- Exit criteria feel arbitrary (need more rigor)
+- Risk assessment reveals more high-impact risks than expected
+- Recommendation confidence is lower than the decision stakes warrant
+
+**Upgrade prompt:**
+```
+⚠️ Synthesis is difficult because:
+- [Cannot clearly articulate what must be true]
+- [Risks are higher than we can confidently assess]
+- [My recommendation confidence is [Low] for a decision of this magnitude]
+
+This suggests we may benefit from deeper analysis in earlier gates.
+
+Options:
+1. Continue at [Weight] - accept higher uncertainty
+2. Return to [Gate] for deeper analysis
+3. Upgrade remaining gates to [Higher Weight]
+
+Which approach?
+```
+
 ## Output
 
 Update decision artifact with synthesis:
@@ -160,9 +203,9 @@ Save to: `docs/decisions/YYYY-MM-DD-<decision-slug>/decision.md` (update existin
 
 ## Exit Criteria
 
-- Must-Be-True Conditions explicitly stated
-- Exit Criteria defined with specific tripwires
-- Risk assessment consolidated from all gates
+- Must-Be-True Conditions explicitly stated (depth per weight)
+- Exit Criteria defined with specific tripwires (depth per weight)
+- Risk assessment consolidated from all gates (depth per weight)
 - Clear recommendation formulated
 - Decision options presented to human
 

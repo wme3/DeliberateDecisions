@@ -60,15 +60,30 @@ Every decision passes through seven mandatory gates:
 | 6 | **Synthesis** | Must-Be-True Conditions, Exit Criteria, recommendation |
 | 7 | **Decision** | Human decides with full picture |
 
-## What to Expect
+## Decision Weight
 
-### Time Investment
+Not all decisions need the same rigor. Choose your depth:
 
-A thorough decision takes **60-120 minutes**. This is intentional—the framework forces slow thinking on decisions that deserve it.
+| Weight | Time | Best For |
+|--------|------|----------|
+| **Light** | <10 min | Reversible, domain expertise, lower stakes |
+| **Medium** | 30-40 min | Moderate stakes, some uncertainty |
+| **Complete** | 60-90 min | High stakes, irreversible, significant uncertainty |
+
+**Weight affects depth, not gates.** All 7 gates always run.
+
+```
+/decide              # AI suggests weight after Thesis
+/decide --light      # Start at Light
+/decide --medium     # Start at Medium
+/decide --complete   # Start at Complete
+```
+
+You can upgrade mid-process. The AI will also suggest upgrading if complexity emerges.
 
 ### Cost Estimate
 
-Based on our test case (a founding AE hire decision):
+Based on our test case (a founding AE hire decision at Complete weight):
 
 | Metric | Estimate |
 |--------|----------|
@@ -77,7 +92,7 @@ Based on our test case (a founding AE hire decision):
 | Output tokens | ~150K-200K |
 | **Estimated cost** | **$15-25** (Claude Opus) |
 
-For a $150K hiring decision, $20 of AI assistance that surfaces blind spots is excellent ROI.
+Light weight: ~$2-5. Medium weight: ~$8-15. For a $150K decision, even Complete is excellent ROI.
 
 ## Commands
 

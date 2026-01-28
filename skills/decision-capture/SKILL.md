@@ -1,17 +1,13 @@
-# Decision Capture Skill
-
-```yaml
+---
 name: decision-capture
-description: Document final decision, rationale, and commit to artifact - the culmination of the decision-making process
-```
+description: Gate 7 - Document final decision, rationale, and commit to artifact
+---
 
-## Purpose
+# Gate 7: Decision Capture
 
-Human makes the final decision with the full picture documented. This is the moment of commitment where analysis transforms into action.
+**Purpose:** Human makes the final decision with the full picture documented.
 
-## Announce
-
-> "Final Gate - time to decide."
+**Announce:** "Final Gate - time to decide."
 
 ## Entry Criteria
 
@@ -85,6 +81,8 @@ Complete the decision document with final sections:
 **Status**: DECIDED
 **Date**: [YYYY-MM-DD]
 **Decision Maker**: [Name/Role]
+**Weight**: [Light/Medium/Complete]
+**Upgraded**: [Yes - from X at Gate Y / No]
 
 ### CHOSEN OPTION
 
@@ -117,13 +115,13 @@ Complete the decision document with final sections:
 
 | Date | Gate | Summary |
 |------|------|---------|
-| [Date] | Problem Definition | [Brief summary] |
-| [Date] | Divergent Exploration | [Brief summary] |
-| [Date] | Assumption Surfacing | [Brief summary] |
-| [Date] | Challenge Gate | [Brief summary] |
-| [Date] | Convergent Analysis | [Brief summary] |
+| [Date] | Thesis | [Brief summary] |
+| [Date] | Landscape | [Brief summary] |
+| [Date] | Research | [Brief summary] |
+| [Date] | Calibration | [Brief summary] |
+| [Date] | Contrarian | [Brief summary] |
 | [Date] | Synthesis | [Brief summary] |
-| [Date] | Decision Capture | Decision finalized |
+| [Date] | Decision | Decision finalized |
 ```
 
 ### Step 5: Commit and Close
@@ -143,10 +141,25 @@ Inform the decision maker:
 > - `/detract` - Generate arguments challenging this decision
 > - `/review-decision` - Structured review when conditions change"
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Summary | One paragraph | Standard format | Full decision summary |
+| Rationale capture | Brief (1-2 sentences) | Key factors | Verbatim + deciding factors |
+| Documentation | Minimal artifact | Standard artifact | Complete artifact |
+| History | Gates listed | Gates + summaries | Full gate history |
+
+**Light:** Quick summary, brief rationale capture, minimal but complete artifact.
+
+**Medium:** Standard summary format, key factors captured, full artifact.
+
+**Complete:** Comprehensive summary, verbatim rationale capture, complete artifact with full gate history.
+
 ## Exit Criteria
 
 - [ ] Decision explicitly stated by human
-- [ ] Rationale documented in decision maker's words
+- [ ] Rationale documented (depth per weight)
 - [ ] Artifact complete with all required sections
 - [ ] Document saved to `docs/decisions/` directory
 - [ ] Decision maker informed of post-decision commands

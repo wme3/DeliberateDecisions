@@ -70,19 +70,20 @@ Business case and counter-case generation from the decision process.
 
 ### 1. Speed vs Quality Tradeoff
 
-**Current state:** Full process takes 60-120 minutes. This is appropriate for major decisions but may be overkill for medium-stakes choices.
+**Status: IMPLEMENTED** - Weight classification now available.
 
-**Ideas:**
-- **Light mode:** 3-gate version (Thesis → Contrarian → Decision) for medium stakes
-- **Express mode:** Single-pass with AI-suggested assumptions for time-constrained situations
-- **Gate skipping:** Allow skipping Research and Calibration if domain expertise is high
+Three depth levels:
+- **Light** (<10 min): All 7 gates at minimal depth
+- **Medium** (30-40 min): All 7 gates at standard depth
+- **Complete** (60-90 min): All 7 gates at full rigor
 
-**Tradeoff:** Speed gains risk blind spots. The framework's value is precisely in the thoroughness.
+Key design decision: **Weight affects depth, not gates.** All 7 gates always run—we vary the thoroughness within each gate rather than skipping gates entirely. This preserves the framework's value while allowing right-sized rigor.
 
-**Recommendation:** Add a "decision weight" classifier at Thesis gate:
-- **Heavy** (default): All 7 gates, full rigor
-- **Medium:** Skip Research web search, shortened Contrarian
-- **Light:** Thesis → Calibration → Decision only
+**How it works:**
+- AI suggests weight after Thesis Gate based on stakes, reversibility, and complexity
+- User can pre-specify with `/decide --light|medium|complete`
+- Can upgrade mid-process (AI also suggests when complexity emerges)
+- Cannot downgrade (completed gates stay as-is)
 
 ### 2. Resume Experience
 
@@ -162,10 +163,12 @@ Deliberate Decisions successfully adapts Superpowers' skill-based architecture t
 - Pre-committed exit criteria prevent sunk cost fallacy
 - Advocacy artifacts are useful outputs
 
-**Key improvements to consider:**
-1. Decision weight classifier for speed/quality tradeoff
-2. Incremental artifact writing for better resume
-3. Outcome tracking for calibration feedback
+**Improvements implemented:**
+1. ✅ Decision weight classifier (Light/Medium/Complete)
+
+**Future improvements to consider:**
+1. Incremental artifact writing for better resume
+2. Outcome tracking for calibration feedback
 
 **The framework's deliberate slowness is a feature, not a bug.** The decisions it's designed for—hiring, strategy, investment—deserve 90 minutes of structured thinking. Optimizing for speed risks undermining the core value proposition.
 

@@ -34,7 +34,7 @@ Imagine the decision was made and failed spectacularly. Work backward.
 
 **Prompt:** "It's one year from now. This decision was a disaster. What happened?"
 
-Document 5+ distinct failure scenarios:
+Document failure scenarios:
 - What went wrong?
 - What did we miss?
 - What assumption proved false?
@@ -78,15 +78,10 @@ For each bias detected, document:
 
 ### 4. Second-Order Effects
 
-Map ripple effects two levels deep.
+Map ripple effects beyond immediate consequences.
 
 **First-order:** Direct consequences of the decision
 **Second-order:** Consequences of the consequences
-
-Example:
-- Decision: Acquire competitor
-- First-order: Gain market share, absorb their team
-- Second-order: Key talent leaves due to culture clash, customers defect to remaining competitor
 
 Consider effects on:
 - Stakeholders not in the room
@@ -107,6 +102,46 @@ A decision killer is:
 
 **If decision killers exist, the decision should not proceed without addressing them.**
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Pre-mortem | Top 3 risks | 5 scenarios with assessment | 5+ with probability/severity/detectability |
+| Steel-man | Skip | Top rejected alternative | All rejected alternatives |
+| Bias audit | Quick self-check | Standard audit (3-4 biases) | Full audit with corrections |
+| Second-order | Note obvious | One level deep | Two levels deep |
+| Decision killers | Quick check | Standard review | Thorough analysis |
+
+**Light:** Focus on top 3 failure scenarios. Skip formal steel-manning. Quick bias self-check. Note obvious second-order effects only.
+
+**Medium:** 5 pre-mortem scenarios. Steel-man the top rejected alternative. Standard bias audit. One level of second-order effects.
+
+**Complete:** Comprehensive pre-mortem (5+ scenarios with full assessment). Steel-man all rejected alternatives. Full bias audit with correction analysis. Two levels of second-order effects.
+
+## Upgrade Detection
+
+**Suggest upgrading if:**
+
+- Pre-mortem reveals high-probability catastrophic scenarios
+- Steel-manning a rejected option reveals it may actually be better
+- Significant biases detected that weren't addressed earlier
+- Second-order effects reveal hidden risks
+
+**Upgrade prompt:**
+```
+⚠️ Contrarian analysis is surfacing serious concerns:
+- [High-risk scenario identified]
+- [Bias detected: X]
+- [Rejected alternative may actually be stronger because Y]
+
+This suggests we should examine these issues more thoroughly.
+
+Current: [Weight]
+Suggested: [Higher Weight] - would allow [deeper analysis of these concerns]
+
+Continue at current depth, or upgrade?
+```
+
 ## Output
 
 Update the decision artifact:
@@ -121,8 +156,6 @@ Update the decision artifact:
 | [Failure mode 1] | Likely | Serious | Low |
 | [Failure mode 2] | Possible | Catastrophic | High |
 | [Failure mode 3] | Unlikely | Manageable | Medium |
-| [Failure mode 4] | ... | ... | ... |
-| [Failure mode 5] | ... | ... | ... |
 
 **Highest-risk scenarios:**
 - [Which require mitigation?]
@@ -135,9 +168,6 @@ Best case for it:
 - [Argument 2]
 When it would be right: [circumstances]
 What we give up: [trade-offs]
-
-**Alternative B: [Rejected option]**
-...
 
 ### Bias Audit
 
@@ -167,14 +197,12 @@ What we give up: [trade-offs]
 - [What must change to proceed?]
 ```
 
-Save updates to: `docs/decisions/YYYY-MM-DD-<decision-slug>/decision.md`
-
 ## Exit Criteria
 
-- 5+ pre-mortem failure scenarios documented
-- All rejected alternatives steel-manned
-- Bias audit completed
-- Second-order effects mapped (2 levels)
+- Pre-mortem scenarios documented (depth per weight)
+- Rejected alternatives steel-manned (depth per weight)
+- Bias audit completed (depth per weight)
+- Second-order effects mapped (depth per weight)
 - Decision killers identified or confirmed absent
 - Human has reviewed and engaged with contrarian analysis
 

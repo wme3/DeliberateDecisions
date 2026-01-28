@@ -13,6 +13,7 @@ description: Gate 2 - Surface Decision Points, Intersections, alternatives, and 
 
 - Thesis Gate completed
 - Decision statement is clear
+- Weight confirmed
 
 ## Process
 
@@ -57,6 +58,43 @@ Categorize what we know:
 - **Unknown-Knowable**: We could find out with research
 - **Unknown-Unknowable**: Cannot be determined; must assume
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Alternatives | 2-3 + do nothing | 4-5 + do nothing | 5-6+ + creative options |
+| Decision Points | Surface (3-5) | Thorough (6-10) | Comprehensive (10+) |
+| Intersections | Note obvious | Map dependencies | Full analysis |
+| Knowns/Unknowns | Quick categorization | Standard matrix | Detailed with confidence |
+
+**Light:** Quick alternative generation. Surface-level Decision Points. Note obvious intersections only.
+
+**Medium:** Thorough alternative exploration. Full Decision Point mapping. Standard intersection analysis.
+
+**Complete:** Generate creative/unconventional alternatives. Comprehensive Decision Points. Full intersection mapping with relationship types.
+
+## Upgrade Detection
+
+**Suggest upgrading if:**
+
+- More alternatives emerge than expected for the weight level
+- Decision Points reveal unexpected complexity
+- Multiple conflicting intersections surface
+- User expresses uncertainty about key assumptions
+
+**Upgrade prompt:**
+```
+⚠️ This decision is more complex than initially appeared -
+[X alternatives emerged / multiple conflicting assumptions / etc.]
+
+Current: [Weight] (~X min remaining)
+Suggested: [Higher Weight] (~Y min remaining)
+
+The deeper analysis would help us [specific benefit].
+
+Continue at current depth, or upgrade?
+```
+
 ## Output
 
 Update decision artifact with:
@@ -99,8 +137,8 @@ Update decision artifact with:
 ## Exit Criteria
 
 - All realistic alternatives documented (including "do nothing")
-- Decision Points surfaced for each alternative
-- Intersections mapped
+- Decision Points surfaced for each alternative (depth per weight)
+- Intersections mapped (depth per weight)
 - Knowns/Unknowns categorized
 
 ## Bias Watch

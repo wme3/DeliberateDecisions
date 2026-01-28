@@ -67,6 +67,44 @@ For each piece of evidence, assess:
 
 Use `deliberate-decisions:evidence-evaluation` for detailed assessment.
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Web research | None - user knowledge only | 1-2 targeted searches | Thorough multi-source |
+| Reference class | Ask user if known | Find basic reference | Deep reference class analysis |
+| Document review | Skip unless provided | Review key docs | Comprehensive review |
+| Evidence quality | Trust user input | Basic assessment | Full quality evaluation |
+
+**Light:** Rely on user's domain knowledge. Ask if they know the reference class. Skip external research unless user lacks knowledge.
+
+**Medium:** 1-2 targeted web searches for key unknowns. Find basic reference class data. Standard evidence assessment.
+
+**Complete:** Thorough external research. Multiple sources for key questions. Deep reference class analysis. Full evidence quality evaluation.
+
+## Upgrade Detection
+
+**Suggest upgrading if:**
+
+- Reference class reveals higher risk than expected
+- Research uncovers surprising/contradictory information
+- Key unknowns remain after Light research
+- User's domain knowledge has significant gaps
+
+**Upgrade prompt:**
+```
+⚠️ Research is revealing [unexpected findings]:
+- [Finding 1]
+- [Finding 2]
+
+This suggests the decision may be higher-stakes than initially framed.
+
+Current: [Weight]
+Suggested: [Higher Weight] - would allow [deeper research / more sources]
+
+Continue at current depth, or upgrade?
+```
+
 ## Output
 
 Create research notes:
@@ -109,9 +147,9 @@ Save to: `docs/decisions/YYYY-MM-DD-<decision-slug>/research-notes.md`
 
 ## Exit Criteria
 
-- High-priority Unknown-Knowables researched
-- Reference class identified with base rates
-- Evidence quality assessed
+- High-priority Unknown-Knowables researched (depth per weight)
+- Reference class identified (depth per weight)
+- Evidence quality assessed (depth per weight)
 - Remaining gaps documented
 
 ## Bias Watch

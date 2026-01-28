@@ -15,6 +15,20 @@ Use this framework when a human faces a **high-stakes decision**:
 - Technical decisions (architecture, vendor selection)
 - Any decision where being wrong is costly
 
+## Decision Weight
+
+Not all decisions need the same rigor. After understanding the decision in Thesis Gate, suggest appropriate depth:
+
+| Weight | Time | Best For |
+|--------|------|----------|
+| **Light** | <10 min | Reversible decisions, domain expertise, lower stakes |
+| **Medium** | 30-40 min | Moderate stakes, some uncertainty |
+| **Complete** | 60-90 min | High stakes, irreversible, significant uncertainty |
+
+**Weight affects depth, not gates.** All 7 gates always run.
+
+See `deliberate-decisions:weight-classification` for detailed guidance.
+
 ## The Seven Gates
 
 Every decision passes through seven mandatory gates. You can exit early, but you cannot skip gates.
@@ -31,7 +45,13 @@ Every decision passes through seven mandatory gates. You can exit early, but you
 
 ## Starting a Decision
 
-Use `/decide` or invoke `deliberate-decisions:thesis-framing` to begin.
+Use `/decide` to begin. Options:
+- `/decide` - AI suggests weight after Thesis gate
+- `/decide --light` - Start at Light depth
+- `/decide --medium` - Start at Medium depth
+- `/decide --complete` - Start at Complete depth
+
+Weight can be upgraded mid-process but not downgraded.
 
 ## Core Principles
 
@@ -40,6 +60,7 @@ Use `/decide` or invoke `deliberate-decisions:thesis-framing` to begin.
 3. **System 2 thinking** - Gates enforce deliberate, not intuitive, analysis
 4. **Adversarial by default** - Pre-mortem and steel-manning are required
 5. **One question at a time** - AI builds the model incrementally
+6. **Right-sized rigor** - Match depth to stakes with weight classification
 
 ## Key Concepts
 
@@ -47,12 +68,28 @@ Use `/decide` or invoke `deliberate-decisions:thesis-framing` to begin.
 - **Decision Intersections**: How Decision Points depend on or conflict with each other
 - **Must-Be-True Conditions**: Assumptions that must hold for the decision to succeed
 - **Exit Criteria**: Pre-committed tripwires to reverse the decision if needed
+- **Weight**: Light/Medium/Complete depth classification
+
+## Upgrading Mid-Process
+
+User can upgrade weight anytime by saying "let's go deeper."
+
+AI should suggest upgrading when detecting:
+- Emerging complexity beyond current weight
+- Low confidence on critical assumptions
+- Surprising research findings
+- Stakes higher than initially framed
+
+Already-completed gates stay as-is. Only remaining gates run at higher depth.
 
 ## Commands
 
 | Command | Action |
 |---------|--------|
 | `/decide` | Start new decision from Thesis gate |
+| `/decide --light` | Start at Light depth |
+| `/decide --medium` | Start at Medium depth |
+| `/decide --complete` | Start at Complete depth |
 | `/advocate` | Generate compelling case FOR |
 | `/detract` | Generate compelling case AGAINST |
 | `/review-decision` | Review past decision against outcomes |

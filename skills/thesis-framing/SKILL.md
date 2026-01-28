@@ -48,12 +48,62 @@ Ask questions **one at a time** to establish:
 - How long until we know if it worked?
 - What's the cost of reversal if wrong?
 
+## Depth by Weight
+
+| Aspect | Light | Medium | Complete |
+|--------|-------|--------|----------|
+| Questions | 3-4 key questions | 5-6 questions | Full exploration |
+| Stakeholders | List only | Identify conflicts | Map relationships |
+| Constraints | Non-negotiables only | All constraints | Constraint flexibility |
+| Success criteria | 1-2 metrics | 3-4 metrics | Comprehensive + timeline |
+
+**Light:** Focus on decision statement, key constraints, reversibility. Skip deep stakeholder analysis.
+
+**Medium:** Cover all sections at standard depth.
+
+**Complete:** Explore each section thoroughly. Map stakeholder relationships. Analyze constraint flexibility.
+
+## Weight Suggestion
+
+**After completing Thesis Gate, suggest decision weight.**
+
+Analyze what you learned:
+- Financial/strategic impact mentioned
+- Reversibility assessment
+- User's apparent domain expertise
+- Complexity of stakeholder landscape
+- Time pressure mentioned
+
+Present weight suggestion:
+
+```
+Based on what you've described:
+- [Key factor 1 - e.g., "$150K investment"]
+- [Key factor 2 - e.g., "moderate reversibility (6 months to evaluate)"]
+- [Key factor 3 - e.g., "you have domain expertise in this area"]
+
+I recommend **[Weight]** depth (~[time]).
+
+- **Light** (<10 min): Quick pass - good for reversible decisions where you have expertise
+- **Medium** (30-40 min): Standard rigor - balances thoroughness with efficiency
+- **Complete** (60-90 min): Full analysis - for high-stakes, hard-to-reverse decisions
+
+Does [recommended weight] feel right, or would you prefer different depth?
+```
+
+Wait for user confirmation before proceeding.
+
+If user pre-specified weight with `/decide --light|medium|complete`, skip this step.
+
 ## Output
 
 Create initial decision artifact:
 
 ```markdown
 # Decision: [Statement]
+
+**Weight:** [Light/Medium/Complete]
+**Estimated time:** [X minutes]
 
 ## Thesis Gate Summary
 
@@ -86,6 +136,7 @@ Save to: `docs/decisions/YYYY-MM-DD-<decision-slug>/decision.md`
 - Constraints documented
 - Success criteria defined
 - Reversibility assessed
+- **Weight confirmed by user**
 
 ## Bias Watch
 
