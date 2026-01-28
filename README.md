@@ -4,13 +4,13 @@ A Claude Code plugin for making high-stakes decisions through systematic researc
 
 ## Origin Story
 
-I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it for a while, I was impressed by how it enforced discipline—TDD, debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
+I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it, I was impressed by how it enforced discipline—TDD, debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
 
-I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, the session hooks—it was elegant and extensible.
+I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, the session hooks. I was expecting to find optimized prompts, but I found something much deeper - structure. 
 
 That exploration sparked an idea: what if I built something similar for decision-making? Not coding decisions, but the messy, high-stakes business decisions that keep founders up at night. Hiring. Strategy. Investment. The decisions where being wrong is expensive and the right answer isn't obvious.
 
-I built Deliberate Decisions as an experiment in applying the same structured, skill-based approach to decision-making that Superpowers applies to coding. It incorporates Kahneman's System 1/System 2 framework, pre-mortem analysis, and reference class forecasting into a 7-gate process that forces slow, deliberate thinking.
+I built Deliberate Decisions as an experiment in applying the same structured, skill-based approach to decision-making that Superpowers applies to coding. It incorporates Kahneman's System 1/System 2 framework, pre-mortem analysis, and reference class forecasting into a 7-gate process that forces slow, deliberate thinking. I was introduced to Kahneman in business school and I've found myself going back to his books time and time again (Thinking Fast & Slow).
 
 I'm sharing it in case others find it useful.
 
