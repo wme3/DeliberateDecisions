@@ -81,19 +81,6 @@ Not all decisions need the same rigor. Choose your depth:
 
 You can upgrade mid-process. The AI will also suggest upgrading if complexity emerges.
 
-### Cost Estimate
-
-Based on our test case (a founding AE hire decision at Complete weight):
-
-| Metric | Estimate |
-|--------|----------|
-| Session duration | ~90 minutes |
-| Input tokens | ~600K-800K |
-| Output tokens | ~150K-200K |
-| **Estimated cost** | **$15-25** (Claude Opus) |
-
-Light weight: ~$2-5. Medium weight: ~$8-15. For a $150K decision, even Complete is excellent ROI.
-
 ## Commands
 
 | Command | Action |
