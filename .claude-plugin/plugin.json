@@ -1,0 +1,12 @@
+{
+  "name": "deliberate-decisions",
+  "description": "Skills for AI agents to help humans make high-stakes decisions through systematic research and structured analysis",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt"
+  },
+  "homepage": "https://github.com/matt/deliberate-decisions",
+  "repository": "https://github.com/matt/deliberate-decisions",
+  "license": "MIT",
+  "keywords": ["decisions", "research", "analysis", "kahneman", "system2", "strategic"]
+}
