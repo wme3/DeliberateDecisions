@@ -159,4 +159,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contributing
 
-This is an experiment. If you find it useful or have ideas for improvement, open an issue or PR.
+This is an experiment. If you find it useful or have ideas for improvement, open an issue or PR. Thanks!
