@@ -1,6 +1,18 @@
 # Deliberate Decisions
 
-A Claude plugin that provides skills for AI agents to help humans make high-stakes decisions through systematic research and structured analysis.
+A Claude Code plugin for making high-stakes decisions through systematic research and structured analysis.
+
+## Origin Story
+
+I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it for a while, I was impressed by how it enforced discipline—TDD, debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
+
+I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, the session hooks—it was elegant and extensible.
+
+That exploration sparked an idea: what if I built something similar for decision-making? Not coding decisions, but the messy, high-stakes business decisions that keep founders up at night. Hiring. Strategy. Investment. The decisions where being wrong is expensive and the right answer isn't obvious.
+
+I built Deliberate Decisions as an experiment in applying the same structured, skill-based approach to decision-making that Superpowers applies to coding. It incorporates Kahneman's System 1/System 2 framework, pre-mortem analysis, and reference class forecasting into a 7-gate process that forces slow, deliberate thinking.
+
+I'm sharing it in case others find it useful.
 
 ## Philosophy
 
@@ -17,7 +29,21 @@ Built on Kahneman's System 1/System 2 framework, Deliberate Decisions enforces s
 ## Installation
 
 ```bash
-# Coming soon: plugin installation
+# Clone the repository
+git clone https://github.com/yourusername/deliberate-decisions.git
+
+# Load as a Claude Code plugin
+claude --plugin-dir /path/to/deliberate-decisions
+```
+
+## Quick Start
+
+```
+> /decide
+
+I'm starting a new decision process using Deliberate Decisions.
+
+What decision are you facing?
 ```
 
 ## The Seven Gates
@@ -34,6 +60,25 @@ Every decision passes through seven mandatory gates:
 | 6 | **Synthesis** | Must-Be-True Conditions, Exit Criteria, recommendation |
 | 7 | **Decision** | Human decides with full picture |
 
+## What to Expect
+
+### Time Investment
+
+A thorough decision takes **60-120 minutes**. This is intentional—the framework forces slow thinking on decisions that deserve it.
+
+### Cost Estimate
+
+Based on our test case (a founding AE hire decision):
+
+| Metric | Estimate |
+|--------|----------|
+| Session duration | ~90 minutes |
+| Input tokens | ~600K-800K |
+| Output tokens | ~150K-200K |
+| **Estimated cost** | **$15-25** (Claude Opus) |
+
+For a $150K hiring decision, $20 of AI assistance that surfaces blind spots is excellent ROI.
+
 ## Commands
 
 | Command | Action |
@@ -44,16 +89,23 @@ Every decision passes through seven mandatory gates:
 | `/review-decision` | Compare outcomes to predictions |
 | `/resume-decision` | Continue a paused decision |
 
+## Documentation
+
+- **[Usage Guide](docs/USAGE.md)** - Detailed walkthrough of each gate and command
+- **[Example Decision](docs/EXAMPLE.md)** - Real decision (founding AE hire) with full process
+- **[Example Artifact](docs/decisions/2026-01-27-founding-ae-hire/decision.md)** - Output from the example
+- **[Example Business Case](docs/decisions/2026-01-27-founding-ae-hire/advocacy/business-case.md)** - Advocacy output
+
 ## Skills
 
 ### Gate Skills
-- `thesis-framing` - Gate 1
-- `landscape-mapping` - Gate 2
-- `deep-research` - Gate 3
-- `calibration` - Gate 4
-- `contrarian-analysis` - Gate 5
-- `synthesis` - Gate 6
-- `decision-capture` - Gate 7
+- `thesis-framing` - Define decision, stakeholders, constraints
+- `landscape-mapping` - Map alternatives, Decision Points
+- `deep-research` - Web research, reference class
+- `calibration` - Separate Facts from Assumptions
+- `contrarian-analysis` - Pre-mortem, steel-man, bias audit
+- `synthesis` - Must-Be-True, Exit Criteria, recommendation
+- `decision-capture` - Document final decision
 
 ### Supporting Skills
 - `using-deliberate-decisions` - Framework introduction
@@ -62,19 +114,47 @@ Every decision passes through seven mandatory gates:
 - `decision-review` - Post-decision analysis
 - `decision-advocacy` - Build the case FOR
 - `decision-detraction` - Build the case AGAINST
+- `writing-style` - Longform and shortform writing principles
 
-## Output
+## Output Structure
 
-Each decision produces:
-- `decision.md` - Full artifact with three views (summary, argument map, decision tree)
-- `research-notes.md` - Raw research findings
-- `calibration-log.md` - Facts vs Assumptions tracking
-- `advocacy/` - Business case and counter-case
+```
+docs/decisions/YYYY-MM-DD-<decision-slug>/
+├── decision.md           # Full artifact
+├── research-notes.md     # Raw research findings
+├── calibration-log.md    # Facts vs Assumptions
+└── advocacy/
+    ├── business-case.md  # Case FOR
+    └── counter-case.md   # Case AGAINST
+```
 
-## Attribution
+## When to Use This
 
-Inspired by [superpowers](https://github.com/obra/superpowers) by Jesse Vincent.
+**Good fit:**
+- High-stakes decisions with significant cost of being wrong
+- Ambiguous situations with multiple viable alternatives
+- Decisions where you suspect confirmation bias
+- Choices that deserve more rigor than intuition
+
+**Not a good fit:**
+- Easily reversible decisions
+- Time-critical situations requiring immediate action
+- Choices with obvious right answers
+- Decisions you've already made
+
+## Acknowledgments
+
+**Superpowers** by [Jesse Vincent](https://github.com/obra) provided the architectural inspiration and plugin patterns for this project. If you're looking for AI-assisted coding workflows, check out [Superpowers](https://github.com/obra/superpowers).
+
+The decision framework incorporates ideas from:
+- Daniel Kahneman's *Thinking, Fast and Slow* (System 1/System 2)
+- Gary Klein's pre-mortem technique
+- Philip Tetlock's reference class forecasting
 
 ## License
 
-MIT
+MIT License - see [LICENSE](LICENSE) for details.
+
+## Contributing
+
+This is an experiment. If you find it useful or have ideas for improvement, open an issue or PR.
