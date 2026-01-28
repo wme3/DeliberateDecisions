@@ -194,11 +194,33 @@ Create the `advocacy/` subdirectory within the decision folder if it doesn't exi
 | When asked to evaluate external proposal | Build counter-case to ensure balanced view |
 | When you feel too confident | Use as intellectual honesty check |
 
+## Writing Style
+
+**Apply `deliberate-decisions:writing-style` throughout.**
+
+Counter-cases use **Shortform** style:
+- 2-3 pages maximum
+- Front-load the strongest concern
+- Active voice, concrete numbers
+- Bullets for evidence, tables for assumptions
+- Clear structure: Concern → Evidence → Severity
+
+Key principles:
+- Direct, confident tone (even when raising doubts)
+- Quantify risks where possible
+- No hedging language - state concerns clearly
+
 ## Relationship to /advocate
 
 `/advocate` and `/detract` are complementary tools:
 
-- **/advocate** - Builds the case FOR the decision
-- **/detract** - Builds the case AGAINST the decision
+- **/advocate** - Builds the case FOR the decision (Longform)
+- **/detract** - Builds the case AGAINST the decision (Shortform)
 
 Using both creates a complete picture. Neither represents the "right" answer - they're lenses for examining the decision from multiple angles.
+
+## Related Skills
+
+- `writing-style` - Apply to all output artifacts
+- `decision-advocacy` - Complementary skill for building case FOR
+- `contrarian-analysis` - Source material for counter-case

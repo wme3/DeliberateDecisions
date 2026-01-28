@@ -246,8 +246,25 @@ Create the `advocacy/` subdirectory within the decision folder to keep advocacy 
 - [ ] Quality checklist passed
 - [ ] Document saved to advocacy folder
 
+## Writing Style
+
+**Apply `deliberate-decisions:writing-style` throughout.**
+
+| Artifact | Style |
+|----------|-------|
+| Executive briefing | Shortform - 1 page, front-load decision, clear CTA |
+| Business case | Longform - structured sections, tables, evidence-based |
+| Team communication | Shortform - bullets, rationale-focused |
+
+Key principles:
+- Active voice, strong verbs
+- Quantify claims with concrete numbers
+- Tables for comparisons, bullets for lists
+- End every section with clear next steps
+
 ## Related Skills
 
+- `writing-style` - Apply to all output artifacts
 - `decision-capture` - Must be completed before advocacy
 - `decision-detraction` - Counter-skill for generating challenges
 - `contrarian-analysis` - Source material for addressing objections
