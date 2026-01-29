@@ -14,6 +14,10 @@ I built Deliberate Decisions as an experiment in applying the same structured, s
 
 I'm sharing it in case others find it useful.
 
+Thanks!
+
+-Matt
+
 ## Philosophy
 
 **Decisions fail in the small assumptions, not the big choices.**
