@@ -4,7 +4,7 @@ A Claude Code plugin for making high-stakes decisions through systematic researc
 
 ## Origin Story
 
-I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it, I was impressed by how it enforced discipline—TDD, debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
+I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it, I was impressed by how it enforced discipline— test-driven developmemt (TDD), debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
 
 I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, the session hooks. I was expecting to find optimized prompts, but I found something much deeper - structure. 
 
