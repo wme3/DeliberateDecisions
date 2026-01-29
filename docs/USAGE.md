@@ -74,13 +74,11 @@ Based on our test case (founding AE hire decision):
 | **Use With Claude Code Pro or Max Plan** | **Uses your subscription** |
 
 
-The cost varies by:
+Token usage varies by:
 - Decision complexity
 - Amount of web research needed
 - How much you iterate on each gate
 - Model used (Opus vs Sonnet)
-
-**Is it worth it?** For a $150K hiring decision, $20 of AI assistance that surfaces blind spots and forces rigorous thinking is excellent ROI.
 
 ## The Seven Gates
 
