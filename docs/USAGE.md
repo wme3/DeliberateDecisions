@@ -71,7 +71,8 @@ Based on our test case (founding AE hire decision):
 | Session duration | ~90 minutes |
 | Input tokens | ~600K-800K |
 | Output tokens | ~150K-200K |
-| **Estimated cost** | **$15-25** (Claude Opus) |
+| **Estimated cost** | **$15-25** (Claude Opus Direct API) |
+| **Use With Claude Code Pro or Max Plan** | **Uses your subscription |
 
 The cost varies by:
 - Decision complexity
