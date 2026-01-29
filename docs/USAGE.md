@@ -71,7 +71,7 @@ Based on our test case (founding AE hire decision):
 | Session duration | ~90 minutes |
 | Input tokens | ~600K-800K |
 | Output tokens | ~150K-200K |
-| **Use With Claude Code Pro or Max Plan** | **Uses your subscription |
+| **Use With Claude Code Pro or Max Plan** | **Uses your subscription** |
 
 
 The cost varies by:
