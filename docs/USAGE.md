@@ -2,19 +2,44 @@
 
 A practical guide to making high-stakes decisions with AI assistance.
 
+## Installation
+
+Add the following to your `~/.claude/settings.json`:
+
+```json
+{
+  "enabledPlugins": {
+    "deliberate-decisions@deliberate-decisions-local": true
+  },
+  "extraKnownMarketplaces": {
+    "deliberate-decisions-local": {
+      "source": {
+        "source": "file",
+        "path": "/path/to/deliberate-decisions/.claude-plugin/marketplace.json"
+      }
+    }
+  }
+}
+```
+
+Replace `/path/to/deliberate-decisions` with the actual path where you cloned the repository.
+
+If you already have other entries in `enabledPlugins` or other settings, merge these entries with your existing configuration.
+
+### Verify Installation
+
+Start a new Claude Code session and run `/plugins` to confirm the plugin is loaded.
+
 ## Quick Start
 
 ```bash
-# Load the plugin
-claude --plugin-dir /path/to/deliberate-decisions
-
 # Start a decision (AI suggests depth after understanding the decision)
-> /deliberate-decisions:decide
+/deliberate-decisions:decide
 
 # Or specify depth upfront
-> /deliberate-decisions:decide --light      # <10 minutes
-> /deliberate-decisions:decide --medium     # 30-40 minutes
-> /deliberate-decisions:decide --complete   # 60-90 minutes
+/deliberate-decisions:decide --light      # <10 minutes
+/deliberate-decisions:decide --medium     # 30-40 minutes
+/deliberate-decisions:decide --complete   # 60-90 minutes
 ```
 
 ## Decision Weight
