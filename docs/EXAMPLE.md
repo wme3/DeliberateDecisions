@@ -196,7 +196,7 @@ Stakeholder-ready advocacy at `docs/decisions/2026-01-27-founding-ae-hire/advoca
 - **No exit criteria:** Keeping a bad hire too long because no tripwires were set
 - **Overconfidence in 30-day ramp:** Planning fallacy identified but not fully addressed
 
-### Time and Cost
+### Time and Tokens
 
 - **Active time:** ~90 minutes
 - **Estimated tokens:** ~700K input, ~175K output
