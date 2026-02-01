@@ -200,6 +200,6 @@ Stakeholder-ready advocacy at `docs/decisions/2026-01-27-founding-ae-hire/advoca
 
 - **Active time:** ~90 minutes
 - **Estimated tokens:** ~700K input, ~175K output
-- **Estimated cost:** ~$20 (Claude Opus)
+
 
 For a $150-200K hiring decision with 18-month runway implications, this investment in decision quality is easily justified.
