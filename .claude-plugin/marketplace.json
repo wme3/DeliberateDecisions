@@ -1,0 +1,16 @@
+{
+  "name": "deliberate-decisions-local",
+  "owner": {
+    "name": "Matt"
+  },
+  "metadata": {
+    "description": "Skills for AI agents to help humans make high-stakes decisions"
+  },
+  "plugins": [
+    {
+      "name": "deliberate-decisions",
+      "source": "./",
+      "description": "Systematic research and structured analysis for high-stakes decisions"
+    }
+  ]
+}
