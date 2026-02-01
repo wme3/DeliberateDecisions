@@ -43,7 +43,7 @@ claude --plugin-dir /path/to/deliberate-decisions
 ## Quick Start
 
 ```
-> /decide
+> /deliberate-decisions:decide
 
 I'm starting a new decision process using Deliberate Decisions.
 
@@ -77,10 +77,10 @@ Not all decisions need the same rigor. Choose your depth:
 **Weight affects depth, not gates.** All 7 gates always run.
 
 ```
-/decide              # AI suggests weight after Thesis
-/decide --light      # Start at Light
-/decide --medium     # Start at Medium
-/decide --complete   # Start at Complete
+/deliberate-decisions:decide              # AI suggests weight after Thesis
+/deliberate-decisions:decide --light      # Start at Light
+/deliberate-decisions:decide --medium     # Start at Medium
+/deliberate-decisions:decide --complete   # Start at Complete
 ```
 
 You can upgrade mid-process. The AI will also suggest upgrading if complexity emerges.
@@ -89,11 +89,11 @@ You can upgrade mid-process. The AI will also suggest upgrading if complexity em
 
 | Command | Action |
 |---------|--------|
-| `/decide` | Start a new decision |
-| `/advocate` | Generate compelling case FOR |
-| `/detract` | Generate compelling case AGAINST |
-| `/review-decision` | Compare outcomes to predictions |
-| `/resume-decision` | Continue a paused decision |
+| `/deliberate-decisions:decide` | Start a new decision |
+| `/deliberate-decisions:advocate` | Generate compelling case FOR |
+| `/deliberate-decisions:detract` | Generate compelling case AGAINST |
+| `/deliberate-decisions:review-decision` | Compare outcomes to predictions |
+| `/deliberate-decisions:resume-decision` | Continue a paused decision |
 
 ## Documentation
 

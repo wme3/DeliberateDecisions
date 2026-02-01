@@ -9,12 +9,12 @@ A practical guide to making high-stakes decisions with AI assistance.
 claude --plugin-dir /path/to/deliberate-decisions
 
 # Start a decision (AI suggests depth after understanding the decision)
-> /decide
+> /deliberate-decisions:decide
 
 # Or specify depth upfront
-> /decide --light      # <10 minutes
-> /decide --medium     # 30-40 minutes
-> /decide --complete   # 60-90 minutes
+> /deliberate-decisions:decide --light      # <10 minutes
+> /deliberate-decisions:decide --medium     # 30-40 minutes
+> /deliberate-decisions:decide --complete   # 60-90 minutes
 ```
 
 ## Decision Weight
@@ -31,7 +31,7 @@ Not all decisions need the same rigor. The framework supports three depth levels
 
 ### How Weight is Determined
 
-1. **User pre-specifies:** `/decide --light` or `/decide --medium` or `/decide --complete`
+1. **User pre-specifies:** `/deliberate-decisions:decide --light` or `--medium` or `--complete`
 2. **AI suggests:** After Thesis Gate, AI analyzes what it learned and recommends a weight
 
 ### Upgrading Mid-Process
@@ -178,17 +178,24 @@ You choose. The AI documents your decision and rationale.
 
 ## Commands
 
-### `/decide` - Start a New Decision
+All commands use the `deliberate-decisions:` prefix.
+
+### `/deliberate-decisions:decide` - Start a New Decision
 
 Launches the 7-gate process. You can pause and resume anytime.
 
-### `/advocate` - Build the Case FOR
+Options:
+- `--light` - Light depth (<10 min)
+- `--medium` - Medium depth (30-40 min)
+- `--complete` - Complete depth (60-90 min)
+
+### `/deliberate-decisions:advocate` - Build the Case FOR
 
 After a decision is made, generates a business case for stakeholders. Uses evidence from the decision process—this is persuasion grounded in rigor.
 
 Output: `docs/decisions/<decision>/advocacy/business-case.md`
 
-### `/detract` - Build the Case AGAINST
+### `/deliberate-decisions:detract` - Build the Case AGAINST
 
 Generates the counter-case using the same evidence. Use this to:
 - Stress-test before finalizing
@@ -197,11 +204,11 @@ Generates the counter-case using the same evidence. Use this to:
 
 Output: `docs/decisions/<decision>/advocacy/counter-case.md`
 
-### `/review-decision` - Post-Decision Analysis
+### `/deliberate-decisions:review-decision` - Post-Decision Analysis
 
 After outcomes are known, compare predictions to reality. Builds your calibration over time.
 
-### `/resume-decision` - Continue Paused Decision
+### `/deliberate-decisions:resume-decision` - Continue Paused Decision
 
 Pick up where you left off. The AI reads your partial artifact and continues from the last completed gate.
 

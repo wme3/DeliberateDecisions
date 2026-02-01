@@ -81,13 +81,13 @@ Key design decision: **Weight affects depth, not gates.** All 7 gates always run
 
 **How it works:**
 - AI suggests weight after Thesis Gate based on stakes, reversibility, and complexity
-- User can pre-specify with `/decide --light|medium|complete`
+- User can pre-specify with `/deliberate-decisions:decide --light|medium|complete`
 - Can upgrade mid-process (AI also suggests when complexity emerges)
 - Cannot downgrade (completed gates stay as-is)
 
 ### 2. Resume Experience
 
-**Current state:** `/resume-decision` requires manual state reconstruction.
+**Current state:** `/deliberate-decisions:resume-decision` requires manual state reconstruction.
 
 **Ideas:**
 - **Checkpoint files:** Save state after each gate automatically
