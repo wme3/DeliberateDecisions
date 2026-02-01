@@ -45,11 +45,11 @@ Every decision passes through seven mandatory gates. You can exit early, but you
 
 ## Starting a Decision
 
-Use `/decide` to begin. Options:
-- `/decide` - AI suggests weight after Thesis gate
-- `/decide --light` - Start at Light depth
-- `/decide --medium` - Start at Medium depth
-- `/decide --complete` - Start at Complete depth
+Use `/deliberate-decisions:decide` to begin. Options:
+- `/deliberate-decisions:decide` - AI suggests weight after Thesis gate
+- `/deliberate-decisions:decide --light` - Start at Light depth
+- `/deliberate-decisions:decide --medium` - Start at Medium depth
+- `/deliberate-decisions:decide --complete` - Start at Complete depth
 
 Weight can be upgraded mid-process but not downgraded.
 
@@ -86,11 +86,11 @@ Already-completed gates stay as-is. Only remaining gates run at higher depth.
 
 | Command | Action |
 |---------|--------|
-| `/decide` | Start new decision from Thesis gate |
-| `/decide --light` | Start at Light depth |
-| `/decide --medium` | Start at Medium depth |
-| `/decide --complete` | Start at Complete depth |
-| `/advocate` | Generate compelling case FOR |
-| `/detract` | Generate compelling case AGAINST |
-| `/review-decision` | Review past decision against outcomes |
-| `/resume-decision` | Continue paused decision |
+| `/deliberate-decisions:decide` | Start new decision from Thesis gate |
+| `/deliberate-decisions:decide --light` | Start at Light depth |
+| `/deliberate-decisions:decide --medium` | Start at Medium depth |
+| `/deliberate-decisions:decide --complete` | Start at Complete depth |
+| `/deliberate-decisions:advocate` | Generate compelling case FOR |
+| `/deliberate-decisions:detract` | Generate compelling case AGAINST |
+| `/deliberate-decisions:review-decision` | Review past decision against outcomes |
+| `/deliberate-decisions:resume-decision` | Continue paused decision |
