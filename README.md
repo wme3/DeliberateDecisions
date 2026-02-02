@@ -4,9 +4,9 @@ A Claude Code plugin for making high-stakes decisions through systematic researc
 
 ## Origin Story
 
-I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it, I was impressed by how it enforced discipline— test-driven developmemt (TDD), debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
+I discovered [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent while looking for ways to improve my AI-assisted coding workflow. After using it, I was impressed by how it enforced discipline— test-driven development (TDD), debugging workflows, code review patterns—through structured skills rather than ad-hoc prompting.
 
-I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, the session hooks. I was expecting to find optimized prompts, but I found something much deeper - structure. 
+I wanted to understand how it worked, so I forked it and walked through the architecture. The plugin system, the skill definitions, and the session hooks. I was expecting to find optimized prompts, but I found something much deeper - structure. 
 
 That exploration sparked an idea: what if I built something similar for decision-making? Not coding decisions, but the messy, high-stakes business decisions that keep founders up at night. Hiring. Strategy. Investment. The decisions where being wrong is expensive and the right answer isn't obvious.
 
@@ -137,7 +137,8 @@ docs/decisions/YYYY-MM-DD-<decision-slug>/
 ## When to Use This
 
 **Good fit:**
-- High-stakes decisions with significant cost of being wrong
+- High-stakes decisions with a high cost of being wrong
+- When you want to challenge your assumptions & explore options
 - Ambiguous situations with multiple viable alternatives
 - Decisions where you suspect confirmation bias
 - Choices that deserve more rigor than intuition
@@ -163,4 +164,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contributing
 
-This is an experiment. If you find it useful or have ideas for improvement, open an issue or PR. Thanks!
+This is an experiment. Decisions are your own. If you find it useful or have ideas for improvement, open an issue or PR. Thanks!
