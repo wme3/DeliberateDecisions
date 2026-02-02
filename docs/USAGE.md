@@ -26,6 +26,8 @@ Replace `/path/to/deliberate-decisions` with the actual path where you cloned th
 
 If you already have other entries in `enabledPlugins` or other settings, merge these entries with your existing configuration.
 
+This will make Deliberate Decisions available from all your Claude Code sessions.
+
 ### Verify Installation
 
 Start a new Claude Code session and run `/plugins` to confirm the plugin is loaded.
