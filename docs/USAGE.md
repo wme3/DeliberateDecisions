@@ -314,3 +314,20 @@ That's the point. If every failure scenario feels implausible, you may have over
 **"I disagree with the recommendation"**
 
 Good. The AI recommends, you decide. Disagreeing with full information is better than agreeing without examining alternatives.
+
+**"Skills don't appear or `/deliberate-decisions:decide` doesn't work"**
+
+Claude Code has a ~15,000 character budget for skill descriptions. If you have many plugins installed, skills may silently disappear from the system prompt—Claude won't know they exist.
+
+To diagnose:
+1. Run `/plugins` to see if deliberate-decisions appears
+2. If missing, you've likely exceeded the token budget
+
+To fix:
+- Disable unused plugins in `~/.claude/settings.json`
+- Or increase the budget by starting Claude with:
+  ```bash
+  SLASH_COMMAND_TOOL_CHAR_BUDGET=30000 claude
+  ```
+
+This plugin alone uses ~1,500 characters—well under the limit. Problems typically occur when combining multiple large plugins.
